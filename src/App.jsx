@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import SideNav from "./components/SideNav";
+import SideNav from "./components/side_nav/SideNav";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedItem, setSelectedItem] = useState("Home");
+  const NavItems = ["Home", "Browse", "Trending", "Saved", "Playlist"];
 
   return (
     <>
@@ -11,7 +12,11 @@ function App() {
         <div className="flex flex-row h-screen ">
           {/* side nav */}
           <div className="w-1/5">
-            <SideNav />
+            <SideNav
+              NavItems={NavItems}
+              selectedItem={selectedItem}
+              setSelectedItem={setSelectedItem}
+            />
           </div>
 
           {/* main page content */}

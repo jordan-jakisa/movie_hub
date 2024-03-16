@@ -6,6 +6,9 @@ export default {
       backgroundImae: {
         "hero-pattern": "url('/assets/dune.jpg')",
       },
+      colors: {
+        primary: "#FF0000",
+      },
     },
   },
   plugins: [],
