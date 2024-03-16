@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import SideNav from "./components/side_nav/SideNav";
+import MainPage from "./components/main_page/MainPage";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("Home");
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <div className="bg-[url('https://media.vanityfair.com/photos/5e962efaac720b00089fd0a9/master/pass/0520-Dune-Tout-Lede-a.jpg')]  w-screen h-screen">
-        <div className="flex flex-row h-screen ">
+        <div className="flex flex-row h-screen bg-black bg-opacity-50">
           {/* side nav */}
           <div className="w-1/5">
             <SideNav
@@ -21,7 +22,7 @@ function App() {
 
           {/* main page content */}
           <div>
-            <p>Hello, world!</p>
+            <MainPage title={selectedItem} />
           </div>
         </div>
       </div>
